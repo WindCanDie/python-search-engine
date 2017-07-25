@@ -1,1 +1,4 @@
 .idea/
+*.pyc
+*.iml
+reptile/com/toy/web/ZhiHuCookies
