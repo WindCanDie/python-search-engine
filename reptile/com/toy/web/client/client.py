@@ -1,3 +1,5 @@
+from abc import abstractmethod
+
 import requests
 
 try:
@@ -19,5 +21,6 @@ class Client:
             print("Cookie 未能加载")
             self.login()
 
+    @abstractmethod
     def login(self):
-        print('开始登录')
+        pass
