@@ -8,7 +8,7 @@ except:
     import http.cookiejar as cookielib
 
 
-class Client:
+class Client(object):
     def __init__(self):
         self.cookiess = 'Cookies'
         self.session = requests.session()
@@ -24,3 +24,9 @@ class Client:
     @abstractmethod
     def login(self):
         pass
+
+    def getAction(self, url):
+        return self.session.get(url, headers=self.headers)
+
+    def postAction(self, url, data):
+        return self.session.post(url, data=data, headers=self.headers)

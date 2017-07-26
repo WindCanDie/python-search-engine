@@ -13,9 +13,11 @@ def getClient(clientType):
     if not client.get(clientType) is None:
         return client.get(clientType)
     if clientType == ClientType.zhihu:
-        client[clientType] = ZhiHu().session
-        return ZhiHu().session
+        client[clientType] = ZhiHu()
+        return client[clientType]
 
 
-if __name__ == '__main__':
-    client = getClient(ClientType.zhihu)
+def aa(sub, foo):
+    for o in foo:
+        if sub(o):
+            print(o)
