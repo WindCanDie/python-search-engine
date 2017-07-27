@@ -90,4 +90,4 @@ class ZhiHuAnalyize(Analyize):
             followersurls.append(followees[i].get('href'))
         del rep
         del soup
-        return followees, followers
+        return followeesurls, followersurls

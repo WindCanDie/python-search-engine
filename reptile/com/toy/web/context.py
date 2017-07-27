@@ -16,8 +16,3 @@ def getClient(clientType):
         client[clientType] = ZhiHu()
         return client[clientType]
 
-
-def aa(sub, foo):
-    for o in foo:
-        if sub(o):
-            print(o)
